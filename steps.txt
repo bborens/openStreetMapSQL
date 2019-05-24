@@ -1,0 +1,32 @@
+### STEPS
+### BY BRYAN BORENSTEIN
+
+1) Download .ova Oracle Linux 7.6 Developer Day VM (preinstalled w/ 12c) or
+use Linux 7.6 and manually install 12c.
+
+2) Create a PDB named ORCL within a container DB (ORCLCDB).
+
+3) Login to SQL*Plus 
+
+	> login : sys as sysdba
+	> password : oracle
+
+	> show con_name;
+	
+	> 'ORCL'
+
+4) Create new user to handle OSM .csvs
+
+	> CREATE USER NAME IDENTIFIED BY PASSWORD;
+	> GRANT UNLIMITED TABLESPACE TO NAME;
+	> GRANT CREATE TABLE TO NAME;
+
+5) Create CTL file in CSV folder.
+
+	A CTL is used by the Oracle Loader Utility SQL*Loader to input the CSV data into a schema
+
+	See the CTL file in /csvFiles 
+
+	First, we will create the table within 12c; see schemaCreation.sql in the Scripts folder
+
+	

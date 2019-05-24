@@ -1,0 +1,31 @@
+# Converting OSM to CSV files
+# In order to load to Oracle 12c with sqlldr
+
+1) Open Terminal (from Ubuntu distro)
+
+	> sudo apt install osmium-tools
+	> pip install imposm.parser
+
+2) Download Appropriate .osm datafile
+
+	> URL('http://download.geofabrik.de/europe/switzerland.html')
+
+# Ensure that the file is moved to your projects root folder.
+
+	> # cd openMapsProj
+
+	> # ls
+
+		> switzerland-latest.osm.bz2
+
+	> # cd address-extraction-openstreetmap-master (SOURCE: (1))
+
+		> run parse_osm.py
+
+	> # ls
+
+		> out-all.csv                            out-no-plz.csv                           parse_osm.py
+		out-no-city-no-plz-no-housenumber.csv  out-no-plz-no-housenumber.csv 
+		out-no-housenumber.csv                 out-no-street-no-plz-no-housenumber.csv
+
+

@@ -1,0 +1,6 @@
+# SOURCES
+
+1) Converting OSM to CSV files (https://github.com/OSMBrasil/csv2osm)https://github.com/lukaselmer/address-extraction-openstreetmap)
+
+2) Kirk, Andy. Data Visualisation: a Handbook for Data Driven Design. Sage Publications Ltd, 2016.
+

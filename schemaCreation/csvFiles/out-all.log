@@ -1,0 +1,58 @@
+
+SQL*Loader: Release 18.0.0.0.0 - Production on Mon May 20 19:18:59 2019
+Version 18.3.0.0.0
+
+Copyright (c) 1982, 2018, Oracle and/or its affiliates.  All rights reserved.
+
+Control File:   out-all.ctl
+Data File:      out-all.csv
+  Bad File:     out-all.bad
+  Discard File:  none specified
+ 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 0
+Errors allowed: 50
+Bind array:     250 rows, maximum of 1048576 bytes
+Continuation:    none specified
+Path used:      Conventional
+
+Table SWITZERLAND, loaded from every logical record.
+Insert option in effect for this table: APPEND
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+LATITUDE                            FIRST     *   ,       CHARACTER            
+LONGITUDE                            NEXT     *   ,       CHARACTER            
+TOWN_NAME                            NEXT     *   ,       CHARACTER            
+STREET_NUM                           NEXT     *   ,       CHARACTER            
+STREET_NAME                          NEXT     *   ,       CHARACTER            
+
+Record 19011: Rejected - Error on table SWITZERLAND, column STREET_NUM.
+ORA-01722: invalid number
+
+Record 40076: Rejected - Error on table SWITZERLAND, column STREET_NUM.
+ORA-01722: invalid number
+
+
+Table SWITZERLAND:
+  56337 Rows successfully loaded.
+  2 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Space allocated for bind array:                 322500 bytes(250 rows)
+Read   buffer bytes: 1048576
+
+Total logical records skipped:          0
+Total logical records read:         56339
+Total logical records rejected:         2
+Total logical records discarded:        0
+
+Run began on Mon May 20 19:18:59 2019
+Run ended on Mon May 20 19:19:03 2019
+
+Elapsed time was:     00:00:04.60
+CPU time was:         00:00:00.13
